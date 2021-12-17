@@ -30,10 +30,44 @@ html {
     position: fixed;
     top: 0;
     background: transparent;
+    visibility: visible;
+}
+
+.small-screen-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    visibility: hidden;
 }
 
 .nav-scrolled {
-    background: var(--lighter-primary-text);
+    background: var(--secondary-color);
+}
+
+.small-screen-nav > h1 {
+    margin-left: 10px;
+    font-family: var(--lowgo-font);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.nav-toggle-btn {
+    margin-right: 20px;
+    font-size: 1.5rem;
+    color: var(--lighter-primary-text);
+}
+
+.nav-toggle-btn-active {
+    color: var(--creamy-white);
+}
+
+.nav-toggle-btn:hover {
+    cursor: pointer;
+    color: #afafaf;
 }
 
 .large-screen-nav > h1 {
@@ -92,6 +126,81 @@ html {
 .social-link:hover {
     transform: scale(1.2);
 }
+
+/* Small Navbar */
+.nav-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    height: 100%;
+    text-align: center;
+    visibility: visible;
+}
+
+.nav-modal-opened {
+    display: none;
+}
+
+.nav-modal > h1 {
+    color: var(--creamy-white);
+    font-family: var(--lowgo-font);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.nav-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    color: var(--creamy-white);
+}
+.nav-close-btn:hover {
+    cursor: pointer;
+    color: #aaaaaa;
+}
+
+.small-nav-link-container {
+    margin-bottom: 100px;
+}
+
+.small-nav-link {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    color: var(--creamy-white);
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    transition: transform 0.2s ease-out;
+}
+
+.small-nav-link:hover {
+    transform: scale(1.2);
+}
+
+.small-social-link-container {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-social-link {
+    color: var(--creamy-white);
+    display: block;
+    font-size: 2rem;
+    transition: transform 0.2s ease-out;
+}
+.small-social-link:hover {
+    transform: scale(1.2);
+}
+/* Small Navbar */
 /* NavBar */
 
 /* Welcom Page */
@@ -381,6 +490,13 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
+    .large-screen-nav {
+        visibility: hidden;
+    }
+    .small-screen-nav {
+        visibility: visible;
+    }
+
     .section-about {
         flex-direction: column;
     }
@@ -419,6 +535,15 @@ footer {
     .subscription {
         margin: 10px 0;
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-modal {
+        width: 100%;
+    }
+    .subscription {
+        width: 90%;
     }
 }
 /* Media Query */
