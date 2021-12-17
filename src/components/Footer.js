@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id='contacts'>
             <div className='lowgo-msg'>
                 <h1>lowgo</h1>
                 <p className='footer-msg'>
@@ -12,22 +12,22 @@ const Footer = () => {
                 <ul className='footer-social-media'>
                     <li>
                         <a href='#' className='social-link'>
-                            <i class='fab fa-facebook'></i>
+                            <i className='fab fa-facebook'></i>
                         </a>
                     </li>
                     <li>
                         <a href='#' className='social-link'>
-                            <i class='fab fa-instagram'></i>
+                            <i className='fab fa-instagram'></i>
                         </a>
                     </li>
                     <li>
                         <a href='#' className='social-link'>
-                            <i class='fab fa-twitter'></i>
+                            <i className='fab fa-twitter'></i>
                         </a>
                     </li>
                     <li>
                         <a href='#' className='social-link'>
-                            <i class='fab fa-linkedin'></i>
+                            <i className='fab fa-linkedin'></i>
                         </a>
                     </li>
                 </ul>
@@ -35,11 +35,11 @@ const Footer = () => {
             <div className='location-info'>
                 <h4>Our Location</h4>
                 <ul className='locations'>
-                    <li class='location'>USA</li>
-                    <li class='location'>Europe</li>
-                    <li class='location'>South Asia</li>
-                    <li class='location'>Indonesia</li>
-                    <li class='location'>Australia</li>
+                    <li className='location'>USA</li>
+                    <li className='location'>Europe</li>
+                    <li className='location'>South Asia</li>
+                    <li className='location'>Indonesia</li>
+                    <li className='location'>Australia</li>
                 </ul>
             </div>
             <div className='contacts'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <section className='section-about'>
+        <section id='section-about' className='section-about'>
             <article className='app-info'>
                 <h2>What is lowgo?</h2>
                 <p>

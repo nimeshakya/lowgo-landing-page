@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscriptions = () => {
     return (
-        <section className='section-subscription'>
+        <section id='section-subscription' className='section-subscription'>
             <h1>Subscriptions</h1>
             <div className='subscription-container'>
                 <div className='subscription'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const WelcomePage = () => {
     return (
-        <section className='section-welcome'>
+        <section id='section-welcome' className='section-welcome'>
             <div className='welcome-text-container'>
                 <h1>All the knowledge in your pocket</h1>
                 <p>
