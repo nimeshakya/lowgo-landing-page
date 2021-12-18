@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const SmallNavbar = ({ showNavModal, setShowNavModal }) => {
     const [navbar, setNabvar] = useState(false);
@@ -27,10 +27,14 @@ const SmallNavbar = ({ showNavModal, setShowNavModal }) => {
 
     return (
         <nav className={classControl(navbar, showNavModal)}>
-            <h1>lowgo</h1>
+            <h1 className={navbar ? 'nav-logo-active' : ''}>lowgo</h1>
 
             <div
-                className='nav-toggle-btn'
+                className={
+                    navbar
+                        ? 'nav-toggle-btn nav-toggle-btn-active'
+                        : 'nav-toggle-btn'
+                }
                 onClick={() => setShowNavModal(!showNavModal)}
             >
                 <i className='fas fa-bars'></i>

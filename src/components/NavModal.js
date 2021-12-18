@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { navLink, socialLink } from '../data';
+
 const NavModal = ({ showNavModal, setShowNavModal }) => {
     const [navbar, setNabvar] = useState(false);
 
@@ -10,7 +12,7 @@ const NavModal = ({ showNavModal, setShowNavModal }) => {
 
         window.scrollTo({
             left: 0,
-            top: location,
+            top: location - 35,
         });
         setShowNavModal(!showNavModal);
     };
@@ -37,108 +39,43 @@ const NavModal = ({ showNavModal, setShowNavModal }) => {
                         <i className='fas fa-times'></i>
                     </div>
                     <ul className='small-nav-link-container'>
-                        <li>
-                            <a
-                                href='#section-welcome'
-                                className={
-                                    navbar
-                                        ? 'small-nav-link nav-link-active'
-                                        : 'small-nav-link'
-                                }
-                                onClick={handleClick}
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#section-about'
-                                className={
-                                    navbar
-                                        ? 'small-nav-link nav-link-active'
-                                        : 'small-nav-link'
-                                }
-                                onClick={handleClick}
-                            >
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#section-subscription'
-                                className={
-                                    navbar
-                                        ? 'small-nav-link nav-link-active'
-                                        : 'small-nav-link'
-                                }
-                                onClick={handleClick}
-                            >
-                                Plans
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#contacts'
-                                className={
-                                    navbar
-                                        ? 'small-nav-link nav-link-active'
-                                        : 'small-nav-link'
-                                }
-                                onClick={handleClick}
-                            >
-                                Contact
-                            </a>
-                        </li>
+                        {navLink.map((link) => {
+                            const { id, url, name } = link;
+                            return (
+                                <li key={id}>
+                                    <a
+                                        href={url}
+                                        className={
+                                            navbar
+                                                ? 'small-nav-link nav-link-active'
+                                                : 'small-nav-link'
+                                        }
+                                        onClick={handleClick}
+                                    >
+                                        {name}
+                                    </a>
+                                </li>
+                            );
+                        })}
                     </ul>
                     <ul className='small-social-link-container'>
-                        <li>
-                            <a
-                                href='#'
-                                className={
-                                    navbar
-                                        ? 'small-social-link social-link-active'
-                                        : 'small-social-link'
-                                }
-                            >
-                                <i className='fab fa-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#'
-                                className={
-                                    navbar
-                                        ? 'small-social-link social-link-active'
-                                        : 'small-social-link'
-                                }
-                            >
-                                <i className='fab fa-instagram'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#'
-                                className={
-                                    navbar
-                                        ? 'small-social-link social-link-active'
-                                        : 'small-social-link'
-                                }
-                            >
-                                <i className='fab fa-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#'
-                                className={
-                                    navbar
-                                        ? 'small-social-link social-link-active'
-                                        : 'small-social-link'
-                                }
-                            >
-                                <i className='fab fa-linkedin'></i>
-                            </a>
-                        </li>
+                        {socialLink.map((link) => {
+                            const { id, url, name, icon } = link;
+                            return (
+                                <li key={id} title={name}>
+                                    <a
+                                        href={url}
+                                        className={
+                                            navbar
+                                                ? 'small-social-link social-link-active'
+                                                : 'small-social-link'
+                                        }
+                                    >
+                                        {icon}
+                                    </a>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </section>
             )}
