@@ -31,6 +31,7 @@ html {
     top: 0;
     background: transparent;
     visibility: visible;
+    z-index: 5;
 }
 
 .small-screen-nav {
@@ -42,6 +43,7 @@ html {
     top: 0;
     background: transparent;
     visibility: hidden;
+    z-index: 5;
 }
 
 .nav-scrolled {
